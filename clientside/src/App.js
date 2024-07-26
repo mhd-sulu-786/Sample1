@@ -15,7 +15,7 @@ export default function App() {
 
   const handleSubmit = async () => {
     try {
-      await axios.post("http://localhost:6767/submit", { name, age, email });
+      await axios.post("https://sample1-ui55.onrender.com/submit", { name, age, email });
       alert("Success");
       setName('');
       setAge('');
@@ -26,7 +26,7 @@ export default function App() {
   }
 
   useEffect(() => {
-    axios.get("http://localhost:6767/datas")
+    axios.get("https://sample1-ui55.onrender.com/datas")
       .then((res) => {
         setData(res.data);
       })
